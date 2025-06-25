@@ -1,3 +1,5 @@
+# Medium-Clone
+Building Medium Clone
 ```txt
 npm install
 npm run dev
