@@ -1,0 +1,88 @@
+// {
+//   "$schema": "node_modules/wrangler/config-schema.json",
+//   "name": "hono-medium",
+//   "main": "src/index.ts",
+//   "compatibility_date": "2025-06-24"
+
+//   // "vars": {
+//   //   "MY_VAR": "my-variable"
+//   // },
+//   // "compatibility_flags": [
+//   //   "nodejs_compat"
+//   // ],
+
+//   // "kv_namespaces": [
+//   //   {
+//   //     "binding": "MY_KV_NAMESPACE",
+//   //     "id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+//   //   }
+//   // ],
+//   // "r2_buckets": [
+//   //   {
+//   //     "binding": "MY_BUCKET",
+//   //     "bucket_name": "my-bucket"
+//   //   }
+//   // ],
+//   // "d1_databases": [
+//   //   {
+//   //     "binding": "MY_DB",
+//   //     "database_name": "my-database",
+//   //     "database_id": ""
+//   //   }
+//   // ],
+//   // "ai": {
+//   //   "binding": "AI"
+//   // },
+//   // "observability": {
+//   //   "enabled": true,
+//   //   "head_sampling_rate": 1
+//   // }
+// }
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "hono-medium",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-06-24",
+
+  "vars": {
+    "DB_CONNECTION_URL": "prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiMDFKWUtZNDRTWDRSRE1aMVpLRTYwMVNDVEIiLCJ0ZW5hbnRfaWQiOiI1Y2I5OTk4OWIzOGU1ZmZkOWJkYmU1MTg5YWQzMmE1ZGVkZWNjNmQ5YmZkZjFlYTAzMzgzZGM1NzUwMWIxY2Q3IiwiaW50ZXJuYWxfc2VjcmV0IjoiNWEwNWYzNzgtMmRmNS00YmJjLTk2YmMtNjc2OTc0NjczYmM4In0.ZF1mBlf37wAHABcqfVzQ3iyyLxfzi6NWR9ZUeVYSIUc"
+  }
+
+  /* Uncomment and configure these as needed:
+
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+
+  "kv_namespaces": [
+    {
+      "binding": "MY_KV_NAMESPACE",
+      "id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    }
+  ],
+
+  "r2_buckets": [
+    {
+      "binding": "MY_BUCKET",
+      "bucket_name": "my-bucket"
+    }
+  ],
+
+  "d1_databases": [
+    {
+      "binding": "MY_DB",
+      "database_name": "my-database",
+      "database_id": ""
+    }
+  ],
+
+  "ai": {
+    "binding": "AI"
+  },
+
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  }
+  */
+}
