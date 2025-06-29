@@ -38,15 +38,17 @@
 //   //   "head_sampling_rate": 1
 //   // }
 // }
-{
-  "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "hono-medium",
-  "main": "src/index.ts",
-  "compatibility_date": "2025-06-24",
+// {
+//   "$schema": "node_modules/wrangler/config-schema.json",
+//   "name": "hono-medium",
+//   "main": "src/index.ts",
+//   "compatibility_date": "2025-06-28",
 
-  "vars": {
-    "DB_CONNECTION_URL": "prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiMDFKWUtZNDRTWDRSRE1aMVpLRTYwMVNDVEIiLCJ0ZW5hbnRfaWQiOiI1Y2I5OTk4OWIzOGU1ZmZkOWJkYmU1MTg5YWQzMmE1ZGVkZWNjNmQ5YmZkZjFlYTAzMzgzZGM1NzUwMWIxY2Q3IiwiaW50ZXJuYWxfc2VjcmV0IjoiNWEwNWYzNzgtMmRmNS00YmJjLTk2YmMtNjc2OTc0NjczYmM4In0.ZF1mBlf37wAHABcqfVzQ3iyyLxfzi6NWR9ZUeVYSIUc"
-  }
+//   "vars": {
+//     "DB_CONNECTION_URL": "prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiMDFKWUtZNDRTWDRSRE1aMVpLRTYwMVNDVEIiLCJ0ZW5hbnRfaWQiOiI1Y2I5OTk4OWIzOGU1ZmZkOWJkYmU1MTg5YWQzMmE1ZGVkZWNjNmQ5YmZkZjFlYTAzMzgzZGM1NzUwMWIxY2Q3IiwiaW50ZXJuYWxfc2VjcmV0IjoiNWEwNWYzNzgtMmRmNS00YmJjLTk2YmMtNjc2OTc0NjczYmM4In0.ZF1mBlf37wAHABcqfVzQ3iyyLxfzi6NWR9ZUeVYSIUc",
+//     "JWT_SECRET":"MySecret"
+     
+//   }
 
   /* Uncomment and configure these as needed:
 
@@ -85,4 +87,31 @@
     "head_sampling_rate": 1
   }
   */
+// }
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "hono-medium",
+  "compatibility_date": "2025-06-28",
+  "main": "./src/index.ts",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "vars": {
+    "JWT_SECRET": "your_jwt_secret",
+    "DATABASE_URL": "prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiMDFKWUtZNDRTWDRSRE1aMVpLRTYwMVNDVEIiLCJ0ZW5hbnRfaWQiOiI1Y2I5OTk4OWIzOGU1ZmZkOWJkYmU1MTg5YWQzMmE1ZGVkZWNjNmQ5YmZkZjFlYTAzMzgzZGM1NzUwMWIxY2Q3IiwiaW50ZXJuYWxfc2VjcmV0IjoiNWEwNWYzNzgtMmRmNS00YmJjLTk2YmMtNjc2OTc0NjczYmM4In0.ZF1mBlf37wAHABcqfVzQ3iyyLxfzi6NWR9ZUeVYSIUc"
+  },
+  "env": {
+    "staging": {
+      "vars": {
+        "DATABASE_URL": "prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiMDFKWUtZNDRTWDRSRE1aMVpLRTYwMVNDVEIiLCJ0ZW5hbnRfaWQiOiI1Y2I5OTk4OWIzOGU1ZmZkOWJkYmU1MTg5YWQzMmE1ZGVkZWNjNmQ5YmZkZjFlYTAzMzgzZGM1NzUwMWIxY2Q3IiwiaW50ZXJuYWxfc2VjcmV0IjoiNWEwNWYzNzgtMmRmNS00YmJjLTk2YmMtNjc2OTc0NjczYmM4In0.ZF1mBlf37wAHABcqfVzQ3iyyLxfzi6NWR9ZUeVYSIUc",
+        "JWT_SECRET": "your_jwt_secret"
+      }
+    },
+    "production": {
+      "vars": {
+        "DATABASE_URL": "prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiMDFKWUtZNDRTWDRSRE1aMVpLRTYwMVNDVEIiLCJ0ZW5hbnRfaWQiOiI1Y2I5OTk4OWIzOGU1ZmZkOWJkYmU1MTg5YWQzMmE1ZGVkZWNjNmQ5YmZkZjFlYTAzMzgzZGM1NzUwMWIxY2Q3IiwiaW50ZXJuYWxfc2VjcmV0IjoiNWEwNWYzNzgtMmRmNS00YmJjLTk2YmMtNjc2OTc0NjczYmM4In0.ZF1mBlf37wAHABcqfVzQ3iyyLxfzi6NWR9ZUeVYSIUc",
+        "JWT_SECRET": "your_jwt_secret"
+      }
+    }
+  }
 }
